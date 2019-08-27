@@ -1,0 +1,203 @@
+﻿
+html 
+{
+    background: linear-gradient(to top right, #0026ff, #ffffff);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    display:-webkit-flex;
+    display:flex;
+    width:100%;
+}
+
+:root
+{
+    --main-bg-color: #99a3ff;
+}
+
+.grid-container > div 
+{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    height: auto;
+    background-color: var(--main-bg-color);
+    border:none;
+    font-family:Calibri;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+    margin:20px;        
+    padding:15px;
+}
+
+.grid-container > div label, .grid-container div label
+{
+    display:block;
+    text-align:left;
+}
+
+.grid-container > div:nth-child(1)
+{
+    background-color: transparent;
+}
+
+.grid-container > div:nth-child(1) label:nth-child(1)
+{
+    font-weight:bold;
+    font-family:Aharoni;
+    font-size:25px;
+    padding:30px 0px 20px 0px;
+}
+
+.grid-container > div:nth-child(1) label:nth-child(2)
+{
+    font-size:13px;
+}
+
+.grid-container > div:nth-child(1) label:nth-child(3) 
+{
+    font-size:80px;
+    font-family:'Microsoft JhengHei UI';
+}
+
+.grid-container > div:nth-child(1) label:nth-child(4) 
+{
+    font-size:20px;
+}
+
+div img {
+    height: 6rem;
+    width: 6rem;
+    margin-bottom: 10px;
+}
+
+.today 
+{
+    color: white;
+    font-family: Calibri;
+}
+
+.today label 
+{
+    display: block;
+}
+
+.num 
+{
+    font-size:30px;
+}
+
+button 
+{
+    border: none;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    cursor:pointer;
+}
+
+button img
+{
+    width:2rem;
+    height:2rem;
+}
+
+input[type=text] 
+{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    background-color: var(--main-bg-color);
+    border: 1px solid #3352ff;
+    text-align: center;
+    height: 2rem;
+    width: 230px;
+    margin: 37px 11.5% 0px 0px;
+    background-image: url('images/search.png');
+    background-repeat: no-repeat;
+    background-position: 20px 8px;
+    font-family:Calibri;
+}
+
+::placeholder 
+{
+    color: black;
+    opacity: 1;
+}
+
+#bottom
+{
+    width: 80%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left:10%;
+    bottom: 0px;
+}
+
+#btn 
+{
+    display:block;
+    text-align:right;
+    margin-right:20px;
+}
+
+#down
+{
+    display:none;
+}
+
+#wrapper {
+    width: 80%;
+}
+
+@media screen and (max-width: 1024px) 
+{
+    html
+    {
+        height:initial;
+    }
+
+    #wrapper
+    {
+        width:100%;
+    }
+    .grid-container
+    {
+        grid-template-columns:none;
+        display:block;
+    }
+
+    #bottom
+    {
+        position:initial;
+        width:100%;
+    }
+
+    input[type=text] 
+    {
+        position: initial;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+
+    #btn{display:none;}
+
+    #down
+    {
+        display:block;
+        text-align:center;
+    }
+
+    .grid-container > div label, .grid-container div label{text-align:center;}
+}
